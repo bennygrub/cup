@@ -1,0 +1,51 @@
+#spree-header{
+	background: white;
+	#header{
+		background: white;
+		border-bottom: 1px solid #d9dede;
+		padding: 0px;
+		#logo{
+			margin-top: 15px;
+			margin-bottom: 0px;
+		}
+	}
+	.nav a{
+		background:transparent;
+		color:#85cad5;
+		border:1px solid #ececec;
+		margin-top:10px;
+		border-radius: 2px;
+		padding:3px 10px;
+		&:hover{	    
+			background-color: #85cbd5;
+	    	border-color: #5db8c3;
+	    	color: white;
+		}
+	}
+}
+
+h1, h2, h3, h4, h5 {font-family: 'Fjalla One', sans-serif;}
+body{
+	font-family: 'Noto Sans', sans-serif;
+}
+.btn-success{
+	background: #d58585;
+	border: 1px solid #b16565;
+	color:white;
+	&:hover{
+	    background-color: #b16565;
+	    border-color: #d58585;
+	}
+}
+
+.form-control, .btn{
+	border-radius: 2px;
+}
+
+.form-control{
+	border-color: #ececec;
+}
+
+#nav-bar li {
+    margin-left: 10px;
+}
