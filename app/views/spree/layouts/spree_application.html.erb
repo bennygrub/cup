@@ -14,13 +14,10 @@
 
     <div class="container">
       <div class="row" data-hook>
-        <%= breadcrumbs(@taxon) %>
-
         <div id="content" class="col-sm-12" data-hook>
           <%= flash_messages %>
           <%= yield %>
         </div>
-
         <%= yield :templates %>
       </div>
     </div>
