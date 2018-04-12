@@ -6,4 +6,6 @@
  *= require spree/frontend
  *= require_self
  *= require_tree .
+ *= require luminous-basic
+ *= require spree/frontend/spree_product_hover_zoom
 */

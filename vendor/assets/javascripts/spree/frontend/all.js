@@ -11,3 +11,6 @@
 
 //= require_tree .
 //= require spree/frontend/spree_auth
+//= require drift.min
+//= require luminous
+//= require spree/frontend/spree_product_hover_zoom
