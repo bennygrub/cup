@@ -1,13 +1,5 @@
 <% @body_id = 'home-page' %>
-<% content_for :sidebar do %>
-  <div data-hook="homepage_sidebar_navigation">
-    <%= render partial: 'spree/shared/taxonomies' %>
-  </div>
-<% end %>
-
-<div data-hook="homepage_products">
-  <% cache(cache_key_for_products) do %>
-    <%= render partial: 'spree/shared/products', locals: { products: @products } %>
-  <% end %>
-</div>
+<h1>Welcome to Cup to Cup!</h1>
+<p> Our incredibly insightful and engaging homepage goes here</p>
+<p>For now though. Just use the nav at the top.</p>
 
