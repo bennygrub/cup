@@ -28,6 +28,12 @@ h1, h2, h3, h4, h5 {font-family: 'Dosis', sans-serif;}
 body{
 	font-family: 'Noto Sans', sans-serif;
 }
+
+.container.full-page-width {
+    width: 100%;
+}
+
+
 .btn-success{
 	background: #d58585;
 	border: 1px solid #b16565;
@@ -108,3 +114,28 @@ h1.product-title{
     border-radius: 2px;	
 }
 
+//HomePage
+.top-area{
+	display: table;
+	background:
+		{
+			image: asset_url("home-bg-2.jpg");
+			size: cover;
+			repeat: no-repeat;
+			position: center;
+
+		}
+
+	min-height:600px;
+	width: 100%;
+	color:white;
+	.center-me{
+		h1, h3, p{background: rgba(120, 202, 214, 0.9);padding:20px 10px;display: inline-block;text-shadow: rgba(0, 0, 0, 0.10) 1px 1px 1px;}
+		h1, h3 {text-transform:uppercase;font-weight: bold;}
+		p{font-size:19px;}
+		display: table-cell;
+	  	vertical-align: middle;
+	  	padding: 10px 15%;
+  	}
+
+}

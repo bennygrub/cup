@@ -12,7 +12,7 @@
     <%= render partial: 'spree/shared/trackers/segment/initializer.js' %>
     <%= render partial: 'spree/shared/header' %>
 
-    <div class="container">
+    <div class="container <%= 'full-page-width' if @full_page_width %>">
       <div class="row" data-hook>
         <div id="content" class="col-sm-12" data-hook>
           <%= flash_messages %>
