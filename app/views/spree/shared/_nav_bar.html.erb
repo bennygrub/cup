@@ -1,7 +1,14 @@
 <nav class="navbar col-sm-10" id="top-nav-bar">
   <ul id="nav-bar" class="nav navbar-nav navbar-right" data-hook>
-    <li id="search-bar" data-hook>
+    <li id="search-bar" style="display: none;" data-hook>
       <%= render partial: 'spree/shared/search' %>
     </li>
+	  <li id="link-to-cart" data-hook>
+	    <noscript>
+	      <%= link_to_cart %>
+	    </noscript>
+	    &nbsp;
+	  </li>
+	  <script>Spree.fetch_cart()</script>
   </ul>
 </nav>

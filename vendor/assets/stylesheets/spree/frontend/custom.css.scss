@@ -1,5 +1,6 @@
 #spree-header{
 	background: white;
+	margin-bottom: 0px;
 	#header{
 		background: white;
 		border-bottom: 1px solid #d9dede;
@@ -22,6 +23,13 @@
 	    	color: white;
 		}
 	}
+	#link-to-cart{
+		a.cart-info.full{
+			background:#5db8c3;
+			border-color:#85cbd5;
+			color:white;
+		}
+	}
 }
 
 h1, h2, h3, h4, h5 {font-family: 'Dosis', sans-serif;}
@@ -31,6 +39,7 @@ body{
 
 .container.full-page-width {
     width: 100%;
+     padding: 0;
 }
 
 
