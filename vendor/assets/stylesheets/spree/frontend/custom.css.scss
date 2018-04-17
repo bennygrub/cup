@@ -43,6 +43,14 @@ body{
 }
 
 
+.taxon-title{
+	background: rgba(120, 202, 214, 0.9);
+	padding: 10px 20px 10px 20px;
+	display: inline-block;
+	color: white;
+	text-shadow: rgba(0, 0, 0, 0.10) 1px 1px 1px;
+}
+
 .btn-success{
 	background: #d58585;
 	border: 1px solid #b16565;
@@ -65,6 +73,10 @@ body{
     margin-left: 10px;
 }
 
+
+.panel-default {
+    border-color: #efefef;
+}
 
 #products{
 	a{
@@ -98,6 +110,7 @@ body{
 	}
 	.panel-footer{
     	background-color: #f9f9f9;
+    	border-top: 1px solid #efefef;
 	}
 }
 
@@ -121,6 +134,33 @@ h1.product-title{
 .well{
 	border: none;
     border-radius: 2px;	
+}
+
+.bar-bg, .brand-bg{
+	min-height:400px;
+	padding:50px;
+	margin: 0 0 20px 0;	
+}
+.bar-bg{
+	background:
+		{
+			image: asset_url("tastingbar.jpg");
+			size: cover;
+			repeat: no-repeat;
+			position: center;
+
+		}
+}
+
+.brand-bg{
+	background:
+		{
+			image: asset_url("brand-support.jpg");
+			size: cover;
+			repeat: no-repeat;
+			position: center;
+
+		}
 }
 
 //HomePage

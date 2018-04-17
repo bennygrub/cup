@@ -1,25 +1,42 @@
-<h1 class="taxon-title"><%= @taxon.name %></h1>
-
-<% if params[:search].present? %>
-  <%= render partial: 'spree/shared/trackers/segment/product_list_filtered.js',
-              formats: :js,
-              locals: { search: params[:search], products: @products } %>
-<% end %>
-<% content_for :sidebar do %>
-  <div data-hook="taxon_sidebar_navigation">
-    <%= render partial: 'spree/shared/taxonomies' %>
-    <%= render partial: 'spree/shared/filters' if @taxon.leaf? %>
-  </div>
-<% end %>
-
-<div data-hook="taxon_products">
-  <%= render partial: 'spree/shared/products', locals: { products: @products, taxon: @taxon } %>
-</div>
-
-<% unless params[:keywords].present? %>
-  <div data-hook="taxon_children">
-    <% cache [I18n.locale, @taxon] do %>
-      <%= render partial: 'taxon', collection: @taxon.children %>
+<% @full_page_width = true %>
+<div class="<%= 'bar-bg' if @taxon.name == 'Tasting Bar' %> <%= 'brand-bg' if @taxon.name == 'Support a Brand' %>">
+  <div class="container">
+    <h1 class="taxon-title" style="font-size:50px;text-transform: uppercase;"><%= @taxon.name %></h1>
+    <% if @taxon.name == 'Tasting Bar' %>
+    <br>
+    <p class="taxon-title" style="font-size:19px;">We believe that you need to taste something before you really know if you want it.</p>
+    <br>
+    <p class="taxon-title" style="font-size:19px;">That's why everything you see below is just $2 per item, with free shipping. We want you to try before you buy.......</p>
+    <% else %>
+    <br>
+    <p class="taxon-title" style="font-size:19px;">Its time to get great deals while you support brands.</p>
+    <br>
+    <p class="taxon-title" style="font-size:19px;">30 days, etc....</p>
     <% end %>
   </div>
-<% end %>
+</div>
+<div class="container">
+  <% if params[:search].present? %>
+    <%= render partial: 'spree/shared/trackers/segment/product_list_filtered.js',
+                formats: :js,
+                locals: { search: params[:search], products: @products } %>
+  <% end %>
+  <% content_for :sidebar do %>
+    <div data-hook="taxon_sidebar_navigation">
+      <%= render partial: 'spree/shared/taxonomies' %>
+      <%= render partial: 'spree/shared/filters' if @taxon.leaf? %>
+    </div>
+  <% end %>
+
+  <div data-hook="taxon_products">
+    <%= render partial: 'spree/shared/products', locals: { products: @products, taxon: @taxon } %>
+  </div>
+
+  <% unless params[:keywords].present? %>
+    <div data-hook="taxon_children">
+      <% cache [I18n.locale, @taxon] do %>
+        <%= render partial: 'taxon', collection: @taxon.children %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
