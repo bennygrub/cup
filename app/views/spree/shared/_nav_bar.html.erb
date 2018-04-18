@@ -10,5 +10,19 @@
 	    &nbsp;
 	  </li>
 	  <script>Spree.fetch_cart()</script>
+	<% if spree_current_user %>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Me
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <%= link_to Spree.t(:my_account), spree.account_path, class: "dropdown-item" %>
+          <%= link_to Spree.t(:logout), spree.logout_path, class: "dropdown-item" %>
+        </div>
+      </li>
+	  
+	<% else %>
+	  <li id="link-to-login"><%= link_to Spree.t(:login), spree.login_path %></li>
+	<% end %>
   </ul>
 </nav>
