@@ -197,6 +197,41 @@ h1.product-title{
 .goal-target, .goal-details, .current-orders{
 	padding:10px 0;
 }
+.support-options{
+	button{
+	    width: 100%;
+	    background: transparent;
+	    border: none;
+	    margin: 0px;
+	    padding: 0px;
+	    text-align: left;
+	}
+	.support-option{
+		border: 1px solid #dddddd;
+		border-radius:2px;
+		padding:20px;
+		margin: 20px 0;
+		&:hover{
+			box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+			border: 1px solid #a8a8a8;
+			cursor:pointer;
+		}
+		.price-of-option{
+			font-size:35px;
+			font-weight:bold;
+		}
+		.title-of-option{
+			font-size:20px;
+			font-weight:bold;
+			padding: 10px 0;
+		}
+		.description-of-option{
+			font-size:16px;
+			padding: 0 0 10px 0 ;
+		}
+		.btn{width:100%;}
+	}	
+}
 
 
 //HomePage
