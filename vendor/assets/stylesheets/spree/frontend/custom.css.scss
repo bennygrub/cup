@@ -140,7 +140,7 @@ body{
 	}
 }
 
-//Product Page
+//Tasting Product Page
 #main-image{
 	min-height: 500px!important;
 	.panel-body{
@@ -188,6 +188,16 @@ h1.product-title{
 
 		}
 }
+
+//Support a Brand Product Page
+.number-highlight{
+	font-size:20px;
+	font-weight:bold;
+}
+.goal-target, .goal-details, .current-orders{
+	padding:10px 0;
+}
+
 
 //HomePage
 .top-area{
