@@ -1,12 +1,4 @@
 GIT
-  remote: git://github.com/vinzloh/spree_product_hover_zoom.git
-  revision: 95dbba4860436716e3c6624d29aa7dba75fdace3
-  specs:
-    spree_product_hover_zoom (1.0.3)
-      spree_core (~> 3.2)
-      spree_frontend (~> 3.2)
-
-GIT
   remote: https://github.com/spree-contrib/spree_editor.git
   revision: 845099c44a12d371be31c1dbdede3463ebed7709
   specs:
@@ -410,7 +402,6 @@ DEPENDENCIES
   spree_auth_devise (~> 3.3)
   spree_editor!
   spree_gateway (~> 3.3)
-  spree_product_hover_zoom!
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
