@@ -191,11 +191,21 @@ h1.product-title{
 
 //Support a Brand Product Page
 .number-highlight{
-	font-size:20px;
+	font-size:30px;
 	font-weight:bold;
 }
 .goal-target, .goal-details, .current-orders{
 	padding:10px 0;
+}
+
+.goals-area{
+	padding:0 20px;
+}
+
+.units-remaining{
+	color: #c7c7c7;
+    font-weight: bold;
+    font-size: 13px;
 }
 .support-options{
 	button{

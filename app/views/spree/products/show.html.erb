@@ -59,28 +59,32 @@
         <p><%= @product.property('Description').html_safe %></p>
       </div>
       <div class="col-sm-12 col-md-8">
-        <%= product_image(@product, itemprop: "image") %>
+        <%= image_tag(@product.images.last.attachment.url(:original), class: "img-responsive") %>
         <%= product_description(@product) %>
       </div>
       <div class="col-sm-12 col-md-4">
+        
         <h3>Goals and Targets</h3>
         <hr>
-        <div class="current-orders">
-          <% @variants = Spree::Variant.where(product_id: 15).ids %>
-          <% @units = Spree::LineItem.where(variant_id: @variants) %>
-          <span class="number-highlight" style="color:green;"><%= @units.count %></span> 
-          <br>
-          Units Ordered
-        </div>
-        <div class="goal-target">
-          <span class="number-highlight"><%= @product.property('Units')%></span>
-          <br>
-          Target Units Ordered
-        </div>
-        <div class="goal-details">
-          <span class="number-highlight"><%= (@product.discontinue_on - Time.now).to_i / 1.day %></span>
-          <br>
-          Days Remaining
+        <div class="goals-area">
+          <div class="current-orders">
+            <% @variants = Spree::Variant.where(product_id: 15).ids %>
+            <% @units = Spree::LineItem.where(variant_id: @variants) %>
+            <span class="number-highlight" style="color:green;"><%= @units.count %></span> 
+            <br>
+            Units Ordered
+            <div class="units-remaining"><%= @product.property('Units').to_i - @units.count.to_i %> remaining to reach target units</div>
+          </div>
+          <div class="goal-target">
+            <span class="number-highlight"><%= @product.property('Units')%></span>
+            <br>
+            Target Units Ordered
+          </div>
+          <div class="goal-details">
+            <span class="number-highlight"><%= (@product.discontinue_on - Time.now).to_i / 1.day %></span>
+            <br>
+            Days Remaining
+          </div>
         </div>
         <hr>
         <div class="support-options">
@@ -90,7 +94,7 @@
               <%= number_field_tag :quantity, 1, class: 'title form-control', min: 1, style: "display:none;" %>
             <%= button_tag id: 'add-to-cart-button', type: :submit do %>
               <div class="support-option">
-                <%=product_image(@product, itemprop: "image", class: "img-responsive") %>
+                <%=image_tag(@product.variant_images[2].attachment.url, itemprop: "image", class: "img-responsive") %>
                 <div class="price-of-option">$25 <span style="color:lightgrey;font-size:18px;">USD</span></div>
                 <div class="title-of-option"><%= @product.property('25-title')%></div>
                 <div class="description-of-option"><%= @product.property('25-description')%></div>
@@ -103,7 +107,7 @@
               <%= number_field_tag :quantity, 1, class: 'title form-control', min: 1, style: "display:none;" %>
             <%= button_tag id: 'add-to-cart-button', type: :submit do %>
               <div class="support-option">
-                <%=product_image(@product, itemprop: "image", class: "img-responsive") %>
+                <%=image_tag(@product.variant_images[3].attachment.url, itemprop: "image", class: "img-responsive") %>
                 <div class="price-of-option">$50 <span style="color:lightgrey;font-size:18px;">USD</span></div>
                 <div class="title-of-option"><%= @product.property('50-title')%></div>
                 <div class="description-of-option"><%= @product.property('50-description')%></div>
@@ -116,7 +120,7 @@
               <%= number_field_tag :quantity, 1, class: 'title form-control', min: 1, style: "display:none;" %>
             <%= button_tag id: 'add-to-cart-button', type: :submit do %>
               <div class="support-option">
-                <%=product_image(@product, itemprop: "image", class: "img-responsive") %>
+                <%=image_tag(@product.variant_images[4].attachment.url, itemprop: "image", class: "img-responsive") %>
                 <div class="price-of-option">$100 <span style="color:lightgrey;font-size:18px;">USD</span></div>
                 <div class="title-of-option"><%= @product.property('100-title')%></div>
                 <div class="description-of-option"><%= @product.property('100-description')%></div>
