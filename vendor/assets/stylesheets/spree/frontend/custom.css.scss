@@ -142,7 +142,7 @@ body{
 
 //Tasting Product Page
 #main-image{
-	min-height: 500px!important;
+	//min-height: 500px!important;
 	.panel-body{
 		width:100%;
 		img{width:100%;}
@@ -162,7 +162,7 @@ h1.product-title{
     border-radius: 2px;	
 }
 
-.bar-bg, .brand-bg{
+.discount-bg, .bar-bg, .brand-bg{
 	min-height:400px;
 	padding:50px;
 	margin: 0 0 20px 0;	
@@ -189,6 +189,17 @@ h1.product-title{
 		}
 }
 
+.discount-bg{
+	background:
+		{
+			image: asset_url("jar.jpg");
+			size: cover;
+			repeat: no-repeat;
+			position: center;
+
+		}
+}
+
 //Support a Brand Product Page
 .number-highlight{
 	font-size:30px;
@@ -200,6 +211,10 @@ h1.product-title{
 
 .goals-area{
 	padding:0 20px;
+}
+
+.goal-details{
+	padding-bottom:50px;	
 }
 
 .units-remaining{
@@ -229,6 +244,7 @@ h1.product-title{
 		.price-of-option{
 			font-size:35px;
 			font-weight:bold;
+			margin-top:20px;
 		}
 		.title-of-option{
 			font-size:20px;
@@ -242,7 +258,18 @@ h1.product-title{
 		.btn{width:100%;}
 	}	
 }
+//Delicious Discounts
+.quick-facts{
+	background: #f9f9f9;
+}
 
+.product-teaser{
+	font-size:16px;
+	line-height:35px;
+	color:grey;
+	margin-top:20px;
+
+}
 
 //HomePage
 .top-area{

@@ -1,17 +1,22 @@
 <% @full_page_width = true %>
-<div class="<%= 'bar-bg' if @taxon.name == 'Tasting Bar' %> <%= 'brand-bg' if @taxon.name == 'Support a Brand' %>">
+<div class="<%= 'bar-bg' if @taxon.permalink == 'bar' %> <%= 'brand-bg' if @taxon.permalink == 'brand' %> <%= 'discount-bg' if @taxon.permalink == 'discounts' %>">
   <div class="container">
     <h1 class="taxon-title" style="font-size:50px;text-transform: uppercase;"><%= @taxon.name %></h1>
-    <% if @taxon.name == 'Tasting Bar' %>
-    <br>
-    <p class="taxon-title" style="font-size:19px;">We believe that you need to taste something before you really know if you want it.</p>
-    <br>
-    <p class="taxon-title" style="font-size:19px;">That's why everything you see below is just $2 per item, with free shipping. We want you to try before you buy.......</p>
+    <% if @taxon.permalink == 'bar' %>
+      <br>
+      <p class="taxon-title" style="font-size:19px;">We believe that you need to taste something before you really know if you want it.</p>
+      <br>
+      <p class="taxon-title" style="font-size:19px;">That's why everything you see below is just $2 per item, with free shipping. We want you to try before you buy.......</p>
+    <% elsif @taxon.permalink == "discounts" %>
+      <br>
+      <p class="taxon-title" style="font-size:19px;">Its time to get great deals while you support brands.</p>
+      <br>
+      <p class="taxon-title" style="font-size:19px;">30 days, etc....</p>
     <% else %>
-    <br>
-    <p class="taxon-title" style="font-size:19px;">Its time to get great deals while you support brands.</p>
-    <br>
-    <p class="taxon-title" style="font-size:19px;">30 days, etc....</p>
+      <br>
+      <p class="taxon-title" style="font-size:19px;">Its time to get great deals while you support brands.</p>
+      <br>
+      <p class="taxon-title" style="font-size:19px;">30 days, etc....</p>
     <% end %>
   </div>
 </div>
