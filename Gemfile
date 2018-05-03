@@ -64,8 +64,15 @@ gem 'paperclip'
 gem 'aws-sdk', '~> 2.3'
 #gem "spree_product_hover_zoom", :git => "git://github.com/vinzloh/spree_product_hover_zoom.git"
 
+#pretty
+gem 'jquery-ui-rails'
+
 #product listings
 gem 'spree_editor', github: 'spree-contrib/spree_editor'
+gem 'spree_product_subscriptions', git: 'https://github.com/nullset2/spree_product_subscriptions.git'
+
+
+
 
 
 

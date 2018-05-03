@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/nullset2/spree_product_subscriptions.git
+  revision: 9da75324a807026787ecd9bfae996a1def168b6d
+  specs:
+    spree_product_subscriptions (3.2.0)
+      spree_core (> 3.2.0.rc2)
+
+GIT
   remote: https://github.com/spree-contrib/spree_editor.git
   revision: 845099c44a12d371be31c1dbdede3463ebed7709
   specs:
@@ -391,6 +398,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
+  jquery-ui-rails
   listen (>= 3.0.5, < 3.2)
   paperclip
   pg (>= 0.18)
@@ -402,6 +410,7 @@ DEPENDENCIES
   spree_auth_devise (~> 3.3)
   spree_editor!
   spree_gateway (~> 3.3)
+  spree_product_subscriptions!
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)

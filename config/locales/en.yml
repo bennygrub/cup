@@ -31,3 +31,5 @@
 
 en:
   hello: "Hello world"
+  spree: 
+    subscribe_now: "Subscripe to CuptoCup Box"
